@@ -1,0 +1,5 @@
+com\avik\redis\exception\ResourceNotFoundException.class
+com\avik\redis\resourse\MovieCache.class
+com\avik\redis\RedisApplication.class
+com\avik\redis\vo\Movie.class
+com\avik\redis\controller\RedisController.class

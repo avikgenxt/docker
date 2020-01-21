@@ -1,0 +1,5 @@
+com\avik\movieinfoservice\resources\MovieResource.class
+com\avik\movieinfoservice\MovieInfoServiceApplication.class
+com\avik\movieinfoservice\models\MovieResult.class
+com\avik\movieinfoservice\models\MovieSummary.class
+com\avik\movieinfoservice\models\Movie.class

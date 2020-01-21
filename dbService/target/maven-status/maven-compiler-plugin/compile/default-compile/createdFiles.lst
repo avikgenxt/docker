@@ -1,0 +1,4 @@
+com\avik\dbService\Repository\MovieDBRepository.class
+com\avik\dbService\Do\Movie.class
+com\avik\dbService\controller\MovieDBController.class
+com\avik\dbService\DbServiceApplication.class
