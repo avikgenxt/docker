@@ -6,7 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>apiGateWay</artifactId>
-  
+  <packaging>war</packaging>
   <properties>
 		<java.version>1.8</java.version>
 		 <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
@@ -22,7 +22,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 		
 		
 	</dependencies>
