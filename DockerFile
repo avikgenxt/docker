@@ -1,30 +1,35 @@
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/apiGateWay-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/apiGateWay.war
+EXPOSE 9092
 CMD ["catalina.sh","run"]
 
 
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/dbService-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/dbService.war
+EXPOSE 8086
 CMD ["catalina.sh","run"]
 
 
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/discovery-server-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/discovery-server.war
+EXPOSE 8761
 CMD ["catalina.sh","run"]
 
 
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/movie-info-service-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/movie-info-service-0.0.1.war
+EXPOSE 8082
 CMD ["catalina.sh","run"]
 
 
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY ./target/redis-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/redis.war
+EXPOSE 8087
 CMD ["catalina.sh","run"]
 
 
