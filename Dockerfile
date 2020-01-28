@@ -40,7 +40,7 @@ CMD ["catalina.sh","run"]
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install Redis.
 RUN \
