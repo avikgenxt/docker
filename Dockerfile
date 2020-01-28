@@ -44,7 +44,9 @@ FROM ubuntu
 
 # Install Redis.
 RUN \
-  cd /tmp && \
+  cd /tmp
+   && yum update -y\ 
+  && \
   wget http://download.redis.io/redis-stable.tar.gz && \
   tar xvzf redis-stable.tar.gz && \
   cd redis-stable && \
