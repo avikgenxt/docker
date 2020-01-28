@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -29,7 +31,8 @@ import com.netflix.discovery.EurekaClient;
 @EnableCaching
 @EnableEurekaClient
 @EntityScan("com.avik.redis.db")
-public class RedisApplication {
+public class RedisApplication extends SpringBootServletInitializer {
+ 
 
 
 	@Autowired
@@ -46,6 +49,12 @@ public class RedisApplication {
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}
+	
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(RedisApplication.class);
+    }
 
 	public static void main(String[] args) {
 		SpringApplication.run(RedisApplication.class, args);
